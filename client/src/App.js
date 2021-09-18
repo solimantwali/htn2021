@@ -1,10 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import { React, useState } from 'react';
+import {useEffect, useState, React} from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
 
+function App(props) {
 
-function App() {
-
+  // session handling
+  const [authUser, setAuthUser] = React.useState(null);
+  
   const [apiResponse, setApiResponse] = useState('');
 
   const callAPI = () => {
@@ -16,21 +24,22 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <button onClick={callAPI}> hi </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          {apiResponse}
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route path={ROUTES.SIGNIN}>
+            <LoginPage/>
+          </Route>
+          <Route path={ROUTES.SIGNUP}>
+            <RegisterPage/>
+          </Route>
+          <Route path={ROUTES.LANDING}>
+            <LandingPage/>
+          </Route>
+          <Route>
+            <
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
