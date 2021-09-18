@@ -1,4 +1,5 @@
 import React from 'react';
+import {Pane, Card, Box} from 'evergreen-ui';
 
 const Home = (props) => {
   // either a volunteer (true) or an organization (false)
@@ -10,10 +11,12 @@ const Home = (props) => {
   }
 
   return (
-    <div>
-      Home page.
-      <button onClick={changeUserType()}>Switch between volunteer or organization</button>
-    </div>
+      <Pane>
+
+    <button onClick={changeUserType()}>Switch between volunteer or organization</button>
+
+      </Pane>
+    
   );
 }
 
