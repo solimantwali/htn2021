@@ -8,8 +8,8 @@ function App() {
   const [apiResponse, setApiResponse] = useState('');
 
   const callAPI = () => {
-    console.log("yo");
-    fetch("http://localhost:9000/testAPI")
+    //console.log("yo");
+    fetch("http://localhost:9000/users/getUsers")
         .then(res => res.text())
         .then(res => setApiResponse(res));
   }
