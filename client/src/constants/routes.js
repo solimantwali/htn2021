@@ -1,4 +1,6 @@
 export const LANDING = '/';
-export const SIGNUP = '/signup';
-export const SIGNIN = '/login';
+export const VOLUNTEERSIGNUP = '/volunteersignup';
+export const VOLUNTEERSIGNIN = '/volunteerlogin';
+export const ORGSIGNUP = '/organizationsignup';
+export const ORGSIGNIN = '/organizationsignin';
 export const HOME = '/home';

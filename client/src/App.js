@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import {useEffect, useState, React} from 'react';
+import {useState, React} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,11 +33,17 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path={ROUTES.SIGNIN}>
-            <LoginPage userType={userType}/>
+          <Route path={ROUTES.VOLUNTEERSIGNIN}>
+            <LoginPage userType='Volunteer'/>
           </Route>
-          <Route path={ROUTES.SIGNUP}>
-            <RegisterPage userType={userType}/>
+          <Route path={ROUTES.VOLUNTEERSIGNUP}>
+            <RegisterPage userType='Volunteer'/>
+          </Route>
+          <Route path={ROUTES.ORGSIGNIN}>
+            <LoginPage userType='Organization'/>
+          </Route>
+          <Route path={ROUTES.ORGSIGNUP}>
+            <RegisterPage userType='Organization'/>
           </Route>
           <Route path={ROUTES.HOME}>
             <HomePage userType={userType} />
