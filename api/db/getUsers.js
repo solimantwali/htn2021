@@ -1,7 +1,7 @@
 const fs = require('fs');
 const {Pool} = require('pg');
 
-var connectionString = "postgresql://htnapp:hackthenorth@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=//Users/labeebzaker/Desktop/HackTheNorth/htn2021/api/db/root.crt&options=--cluster%3Dsandy-mule-3560";
+var connectionString = "postgresql://htnapp:hackthenorth@free-tier.gcp-us-central1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&sslrootcert=/home/soli/htn2021/api/db/root.crt&options=--cluster%3Dsandy-mule-3560";
 
 const parse = require("pg-connection-string").parse;
 var config = parse(connectionString);
